@@ -181,6 +181,13 @@ bitflags! {
     #[doc = "A set of environment flags which could be changed after opening"]
 
     flags EnvFlags: c_uint {
+    }
+}
+
+bitflags! {
+    #[doc = "A set of environment flags which could be changed after opening"]
+
+    flags EnvFlags: c_uint {
 
         #[doc="Don't flush system buffers to disk when committing a
         transaction. This optimization means a system crash can
