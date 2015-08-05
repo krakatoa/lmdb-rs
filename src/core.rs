@@ -239,13 +239,7 @@ bitflags! {
         case. This flag may be changed at any time using
         mdb_env_set_flags()."]
         const EnvNoMemInit   = ffi::MDB_NOMEMINIT
-    }
-}
 
-bitflags! {
-    #[doc = "A set of all environment flags"]
-
-    flags EnvCreateFlags: c_uint {
         #[doc="Use a fixed address for the mmap region. This flag must be"]
         #[doc=" specified when creating the environment, and is stored persistently"]
         #[doc=" in the environment. If successful, the memory map will always reside"]
@@ -345,6 +339,13 @@ bitflags! {
         #[doc="the memory that was reserved in that case. This flag may be"]
         #[doc="changed at any time using mdb_env_set_flags()."]
         const EnvCreateNoMemInit   = ffi::MDB_NOMEMINIT
+    }
+}
+
+bitflags! {
+    #[doc = "A set of all environment flags"]
+
+    flags EnvCreateFlags: c_uint {
     }
 }
 
