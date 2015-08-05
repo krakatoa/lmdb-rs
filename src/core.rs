@@ -238,7 +238,7 @@ bitflags! {
         to overwrite all of the memory that was reserved in that
         case. This flag may be changed at any time using
         mdb_env_set_flags()."]
-        const EnvNoMemInit   = ffi::MDB_NOMEMINIT
+        const EnvNoMemInit   = ffi::MDB_NOMEMINIT,
 
         #[doc="Use a fixed address for the mmap region. This flag must be"]
         #[doc=" specified when creating the environment, and is stored persistently"]
